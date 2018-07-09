@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Mon blog{% endblock %} - Crêpes bretonnes</title>
+
+        
+        <!-- Bootstrap core -->
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css' %}" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/styles.css' %}" />
+
+    </head>
+
+    <!-- Google font api -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cormorant');
+        @import url('https://fonts.googleapis.com/css?family=Tangerine');
+        @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+    </style>
+
+    <body>
+        <div class="container container1">
+            <header>
+            	<aside>
+                	<a href="{% url 'admin:index' %}">Admin</a>
+                </aside>
+
+                <h1>Crêpes-bretonnes.com</h1>
+            </header>
+
+            <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+            	{% block content %}{% endblock %}
+            </div>
+                    
+        </div>
+
+        <footer>
+                Mon super Miniblog - Powered by Django
+        </footer>
+        
+        
+        <!-- jQuery -->
+        <script src="{% static 'blog/js/jquery.js' %}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
