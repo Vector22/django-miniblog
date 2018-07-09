@@ -1,0 +1,5 @@
+crepes/blog/__pycache__/
+crepes/blog/migrations/
+crepes/crepes/__pycahe__/
+crepes/crepes/settings.py
+crepes/db.sqlite3
